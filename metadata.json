@@ -3,7 +3,7 @@
     "name" : "gmod",
     "version" : "latest",
     "arch" : "amd64",
-    "docker_recipe" : "bfosberry/gmod"
+    "docker_recipe" : "bfosberry/gmod-server"
   },
   "provides" : [
     { "name" : "Status",
