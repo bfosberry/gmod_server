@@ -1,30 +1,30 @@
+log on
 hostname "{{ .hostname }}"
 rcon_password "{{ .rcon_password }}"
-sv_search_key {{ .sv_search_key }}
+sv_lan "{{ .sv_lan }}"
+sv_region "{{ .sv_region }}"
 {{ if .sv_password }} sv_password "{{ .sv_password }}"{{ end }}
 
-sv_alltalk {{ .sv_alltalk }}
-sv_consistency {{ .sv_consistency }}
-{{ if .sv_contact }} sv_contact "{{ .sv_contact }}"{{ end }}
-sv_voiceenable {{ .sv_voiceenable }}
-sv_region {{ .sv_region }}
-sv_log_onefile {{ .sv_log_onefile }}
-sv_logbans {{ .sv_logbans }}
-sv_lan {{ .sv_lan }}
-sv_pure {{ .sv_pure }}
-sv_cheats {{ .sv_cheats }}
-{{ if .sv_gametypes }} sv_gametypes "{{ .sv_gametypes }}"{{ end }}
-{{ if .sv_unlag }} sv_unlag {{ .sv_unlag }}{{ end }}
-{{ if .sv_maxunlag }} sv_maxunlag {{ .sv_maxunlag }}{{ end }}
-{{ if .sv_steamgroup }} sv_steamgroup "{{ .sv_steamgroup }}"{{ end }}
-{{ if .sv_steamgroup_exclusive }} sv_steamgroup_exclusive {{ .sv_steamgroup_exclusive }}{{ end }}
-{{ if .mp_disable_autokick }} mp_disable_autokick {{ .mp_disable_autokick }}{{ end }}
-{{ if .sv_allow_lobby_connect_only }} sv_allow_lobby_connect_only {{ .sv_allow_lobby_connect_only }}{{ end }}
-{{ if .sv_forcepreload }} sv_forcepreload {{ .sv_forcepreload }}{{ end }}
-{{ if .sv_pure_kick_clients }} sv_pure_kick_clients {{ .sv_pure_kick_clients }}{{ end }}
 
-setmaster add 213.239.209.221:27011
-setmaster add 72.165.61.189:27011
-setmaster add 68.142.72.250:27011
-setmaster add 69.28.140.246:27011
-setmaster add 69.28.140.247:27011
+sbox_allownpcs {{ .sbox_allownpcs }}
+sbox_godmode {{ .sbox_godmode }}
+sbox_plpldamage {{ .sbox_plpldamage }}
+sbox_playergod {{ .sbox_playergod }}
+sbox_noclip {{ .sbox_noclip }}
+
+sbox_maxprops {{ .sbox_maxprops }}
+sbox_maxragdolls {{ .sbox_maxragdolls }}
+sbox_maxnpcs {{ .sbox_maxnpcs }}
+sbox_maxballoons {{ .sbox_maxballoons }}
+sbox_maxeffects {{ .sbox_maxeffects }}
+sbox_maxdynamite {{ .sbox_maxdynamite }}
+sbox_maxlamps {{ .sbox_maxlamps }}
+sbox_maxthrusters {{ .sbox_maxthrusters }}
+sbox_maxwheels {{ .sbox_maxwheels }}
+sbox_maxhoverballs {{ .sbox_maxhoverballs }}
+sbox_maxvehicles {{ .sbox_maxvehicles }}
+sbox_maxbuttons {{ .sbox_maxbuttons }}
+sbox_maxsents {{ .sbox_maxsents }}
+sbox_maxemitters {{ .sbox_maxemitters }}
+sbox_maxspawners {{ .sbox_maxspawners }}
+sbox_maxturrets {{ .sbox_maxturrets }}

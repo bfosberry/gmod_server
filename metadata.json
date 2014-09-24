@@ -34,21 +34,14 @@
     { "name" : "Hostname",
       "key" : "hostname",
       "type" : "string",
-      "default_value": "",
+      "default_value": "My Garrys Mod Server",
       "required": true,
       "customizable" : true
     },
     { "name" : "Rcon Password",
       "key" : "rcon_password",
       "type" : "string",
-      "default_value": "",
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Search Key",
-      "key" : "sv_search_key",
-      "type" : "string",
-      "default_value": "",
+      "default_value": "password123",
       "required": true,
       "customizable" : true
     },
@@ -59,34 +52,6 @@
       "required": false,
       "customizable" : true
     },
-    { "name" : "Alltalk",
-      "key" : "sv_alltalk",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Consistency",
-      "key" : "sv_consistency",
-      "type" : "string",
-      "default_value": 1,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Contact Info",
-      "key" : "sv_contact",
-      "type" : "string",
-      "default_value": "",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Enable Voice",
-      "key" : "sv_voiceenable",
-      "type" : "intbool",
-      "default_value": 1,
-      "required": true,
-      "customizable" : true
-    },
     { "name" : "Region",
       "key" : "sv_region",
       "type" : "integer",
@@ -94,107 +59,12 @@
       "required": true,
       "customizable" : true
     },
-    { "name" : "Single Log File",
-      "key" : "sv_log_onefile",
-      "type" : "intbool",
-      "default_value": 1,
+    { "name" : "Map Cycle File",
+      "key" : "mapcyclefile",
+      "type" : "string",
+      "default_value": "mapcycle.txt",
       "required": true,
       "customizable" : false
-    },
-    { "name" : "Log Bans",
-      "key" : "sv_logbans",
-      "type" : "intbool",
-      "default_value": 1,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Lan Only",
-      "key" : "sv_lan",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Pure",
-      "key" : "sv_pure",
-      "type" : "integer",
-      "default_value": 1,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Cheats",
-      "key" : "sv_cheats",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Game Types",
-      "key" : "sv_gametypes",
-      "type" : "string",
-      "default_value": "coop,versus,survival,scavenge",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Unlag",
-      "key" : "sv_unlag",
-      "type" : "intbool",
-      "default_value": 1,
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Max Unlag",
-      "key" : "sv_maxunlag",
-      "type" : "float",
-      "default_value": 0.5,
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Steam Group",
-      "key" : "sv_steamgroup",
-      "type" : "string",
-      "default_value": "",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Steam Group Exclusive",
-      "key" : "sv_steamgroup_exclusive",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": false,
-      "customizable" : true
-    },
-    { 
-      "name" : "Disable Autokick",
-      "key" : "mp_disable_autokick",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": false,
-      "customizable" : true
-    },
-    { 
-      "name" : "Lobby Connect Only",
-      "key" : "sv_allow_lobby_connect_only",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": false,
-      "customizable" : true
-    },
-    { 
-      "name" : "Force Preload",
-      "key" : "sv_forcepreload",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": false,
-      "customizable" : true
-    },
-    { 
-      "name" : "Pure Kick",
-      "key" : "sv_pure_kick_clients",
-      "type" : "intbool",
-      "default_value": 0,
-      "required": false,
-      "customizable" : true
     },
     { 
       "name" : "Max Players",
@@ -208,43 +78,203 @@
       "name" : "Starting Map",
       "key" : "starting_map",
       "type" : "string",
-      "default_value": "c1m1_hotel",
+      "default_value": "gm_construct",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Lan only",
+      "key" : "sv_lan",
+      "type" : "intbool",
+      "default_value": "0",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Allow NPCs",
+      "key" : "sbox_godmode",
+      "type" : "intbool",
+      "default_value": "0",
+      "required": true,
+      "customizable" : true
+    },
+        { 
+      "name" : "Allow Godmode",
+      "key" : "sbox_allownpcs",
+      "type" : "intbool",
+      "default_value": "1",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Disable PVP Damage",
+      "key" : "sbox_plpldamage",
+      "type" : "intbool",
+      "default_value": "0",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Allow Godmode",
+      "key" : "sbox_playergod",
+      "type" : "intbool",
+      "default_value": "0",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Allow Noclip",
+      "key" : "sbox_noclip",
+      "type" : "intbool",
+      "default_value": "1",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Props",
+      "key" : "sbox_maxprops",
+      "type" : "integer",
+      "default_value": "150",
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Ragdolls",
+      "key" : "sbox_maxragdolls",
+      "type" : "integer",
+      "default_value": 5,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max NPCs",
+      "key" : "sbox_maxnpcs",
+      "type" : "integer",
+      "default_value": 10,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Balloons",
+      "key" : "sbox_maxballoons",
+      "type" : "integer",
+      "default_value": 10,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Effects",
+      "key" : "sbox_maxeffects",
+      "type" : "integer",
+      "default_value": 50,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Dynamite",
+      "key" : "sbox_maxdynamite",
+      "type" : "integer",
+      "default_value": 10,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Lamps",
+      "key" : "sbox_maxlamps",
+      "type" : "integer",
+      "default_value": 20,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Thrusters",
+      "key" : "sbox_maxthrusters",
+      "type" : "integer",
+      "default_value": 30,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Wheels",
+      "key" : "sbox_maxwheels",
+      "type" : "integer",
+      "default_value": 20,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Hoverballs",
+      "key" : "sbox_maxhoverballs",
+      "type" : "integer",
+      "default_value": 20,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Vehicles",
+      "key" : "sbox_maxvehicles",
+      "type" : "integer",
+      "default_value": 6,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Buttons",
+      "key" : "sbox_maxbuttons",
+      "type" : "integer",
+      "default_value": 20,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Sents",
+      "key" : "sbox_maxsents",
+      "type" : "integer",
+      "default_value": 20,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Emitters",
+      "key" : "sbox_maxemitters",
+      "type" : "integer",
+      "default_value": 5,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Spawners",
+      "key" : "sbox_maxspawners",
+      "type" : "integer",
+      "default_value": 3,
+      "required": true,
+      "customizable" : true
+    },
+    { 
+      "name" : "Max Turrets",
+      "key" : "sbox_maxturrets",
+      "type" : "integer",
+      "default_value": 2,
       "required": true,
       "customizable" : true
     }
   ],
   "maps": [
-    "c1m1_hotel",
-    "c1m2_streets",
-    "c1m3_mall",
-    "c1m4_atrium",
-    "c2m1_highway",
-    "c2m2_fairgrounds",
-    "c2m3_coaster",
-    "c2m4_barns",
-    "c2m5_concert",
-    "c3m1_plankcountry",
-    "c3m2_swamp",
-    "c3m4_plantation",
-    "c4m1_milltown_a",
-    "c4m2_sugarmill_a",
-    "c4m3_sugarmill_b",
-    "c4m4_milltown_b",
-    "c4m5_milltown_escape",
-    "c5m1_waterfront",
-    "c5m2_park",
-    "c5m3_cemetery",
-    "c5m4_quarter",
-    "c5m5_bridge"
+    "gm_construct",
+    "gm_flatgrass"
   ],
   "mods" :[
   ],
   "ports" :[
+    { "port" : "26901/udp", 
+      "name": "Server Port" },
+    { "port" : "27005/udp", 
+      "name": "Server Port" },
     { "port" : "27015/udp", 
       "name": "Server Port" },
     { "port": "27015/tcp", 
       "name" :"Server Port" },
-    { "port": "27020/tcp", 
+    { "port": "27020/udp", 
       "name": "SteamTv Port" }
   ]
 }

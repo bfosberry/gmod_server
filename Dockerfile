@@ -13,6 +13,8 @@ RUN mkdir /opt/server/cfg
 RUN chown -R steam.steam /opt/*
 USER steam
 #define ports
+EXPOSE 26901/udp
+EXPOSE 27005/udp
 EXPOSE 27015
 EXPOSE 27015/udp
-EXPOSE 27020
+EXPOSE 27020/udp
