@@ -12,6 +12,8 @@ ADD ./confd /opt/server/confd
 RUN mkdir /opt/server/cfg
 RUN chown -R steam.steam /opt/*
 USER steam
+
+WORKDIR /opt/server
 #define ports
 EXPOSE 26901/udp
 EXPOSE 27005/udp
