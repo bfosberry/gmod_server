@@ -7,11 +7,8 @@ MAINTAINER bfosberry
 
 ENV PORT 27015
 
-USER root
 ADD ./confd /opt/server/confd
 RUN mkdir /opt/server/cfg
-RUN chown -R steam.steam /opt/*
-USER steam
 
 WORKDIR /opt/server
 #define ports
