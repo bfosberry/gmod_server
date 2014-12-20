@@ -1,1 +1,1 @@
-/opt/server/srcds_run -debug -game garrysmod +map "{{ .starting_map }}" +maxplayers {{ .max_players }} -strictportbind -ip 0.0.0.0 -port $PORT 2>&1 | tee /opt/data/logs/stdout.og
+/opt/server/srcds_run -debug -game garrysmod +map "{{ .starting_map }}" +maxplayers {{ .max_players }} -strictportbind -ip 0.0.0.0 -port $PORT 2>&1 | tee /opt/data/logs/stdout.log

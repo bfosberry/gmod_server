@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p /opt/data/logs
 sed -i "s/\$SERVER_ID/$SERVER_ID/" /opt/server/confd/conf.d/*.toml
 confd -verbose -onetime -node "http://$ETCD_SERVER" -confdir /opt/server/confd/ -prefix "/_$SERVER_ID/config"
 chmod +x /opt/server/scripts/run
