@@ -5,8 +5,6 @@
 FROM bfosberry/steam_base
 MAINTAINER bfosberry
 
-ENV PORT 27015
-
 ADD ./confd /opt/server/confd
 RUN mkdir /opt/server/cfg
 RUN sudo chown -R appuser:appuser /opt/

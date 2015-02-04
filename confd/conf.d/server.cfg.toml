@@ -2,30 +2,5 @@
 src = "server.cfg.tmpl"
 dest = "/opt/server/garrysmod/cfg/server.cfg"
 keys = [
-  "/_$SERVER_ID/config/hostname",
-  "/_$SERVER_ID/config/rcon_password",
-  "/_$SERVER_ID/config/sv_password",
-  "/_$SERVER_ID/config/sv_region",
-  "/_$SERVER_ID/config/sv_lan",
-  "/_$SERVER_ID/config/sbox_allownpcs",
-  "/_$SERVER_ID/config/sbox_godmode",
-  "/_$SERVER_ID/config/sbox_plpldamage",
-  "/_$SERVER_ID/config/sbox_playergod",
-  "/_$SERVER_ID/config/sbox_noclip",
-  "/_$SERVER_ID/config/sbox_maxprops",
-  "/_$SERVER_ID/config/sbox_maxragdolls",
-  "/_$SERVER_ID/config/sbox_maxnpcs",
-  "/_$SERVER_ID/config/sbox_maxballoons",
-  "/_$SERVER_ID/config/sbox_maxeffects",
-  "/_$SERVER_ID/config/sbox_maxdynamite",
-  "/_$SERVER_ID/config/sbox_maxlamps",
-  "/_$SERVER_ID/config/sbox_maxthrusters",
-  "/_$SERVER_ID/config/sbox_maxwheels",
-  "/_$SERVER_ID/config/sbox_maxhoverballs",
-  "/_$SERVER_ID/config/sbox_maxvehicles",
-  "/_$SERVER_ID/config/sbox_maxbuttons",
-  "/_$SERVER_ID/config/sbox_maxsents",
-  "/_$SERVER_ID/config/sbox_maxemitters",
-  "/_$SERVER_ID/config/sbox_maxspawners",
-  "/_$SERVER_ID/config/sbox_maxturrets"
+  "config"
 ]

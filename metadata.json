@@ -3,15 +3,9 @@
     "name" : "gmod",
     "version" : "latest",
     "arch" : "amd64",
-    "docker_recipe" : "bfosberry/gmod-server"
+    "docker_repo" : "bfosberry/gmod-server"
   },
   "provides" : [
-    { "name" : "Status",
-      "data_type" : "string",
-      "key" : "status",
-      "default_value" : "Initializing",
-      "visible" : true
-    },
     { "name" : "Error",
       "data_type" : "string",
       "key" : "error",
@@ -20,15 +14,6 @@
     }
   ],
   "responds_to" : [
-    { "name": "Restart",
-      "key": "restart",
-      "type": "bool" },
-    { "name": "Delete Logs",
-      "key": "delete_logs",
-      "type": "bool" },
-    { "name": "Reset",
-      "key": "reset",
-      "type": "bool" }
   ],
   "requires" : [
     { "name" : "Hostname",
@@ -103,22 +88,6 @@
       "key" : "sbox_allownpcs",
       "type" : "intbool",
       "default_value": "1",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Disable PVP Damage",
-      "key" : "sbox_plpldamage",
-      "type" : "intbool",
-      "default_value": "0",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Allow Godmode",
-      "key" : "sbox_playergod",
-      "type" : "intbool",
-      "default_value": "0",
       "required": true,
       "customizable" : true
     },
@@ -241,22 +210,6 @@
       "default_value": 5,
       "required": true,
       "customizable" : true
-    },
-    { 
-      "name" : "Max Spawners",
-      "key" : "sbox_maxspawners",
-      "type" : "integer",
-      "default_value": 3,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Turrets",
-      "key" : "sbox_maxturrets",
-      "type" : "integer",
-      "default_value": 2,
-      "required": true,
-      "customizable" : true
     }
   ],
   "maps": [
@@ -266,15 +219,25 @@
   "mods" :[
   ],
   "ports" :[
-    { "port" : "26901/udp", 
-      "name": "Server Port" },
-    { "port" : "27005/udp", 
-      "name": "Server Port" },
-    { "port" : "27015/udp", 
-      "name": "Server Port" },
-    { "port": "27015/tcp", 
-      "name" :"Server Port" },
-    { "port": "27020/udp", 
-      "name": "SteamTv Port" }
+    { "port" : "26901",
+      "protocol": "udp", 
+      "name": "Server Port",
+      "dynamic": false },
+    { "port" : "27005",
+      "protocol": "udp", 
+      "name": "Server Port",
+      "dynamic": false },
+    { "port" : "27015",
+      "protocol": "udp", 
+      "name": "Server Port",
+      "dynamic": false },
+    { "port": "27015",
+      "protocol": "tcp", 
+      "name" :"Server Port",
+      "dynamic": false },
+    { "port": "27020",
+      "protocol": "udp", 
+      "name": "SteamTv",
+      "dynamic": false }
   ]
 }

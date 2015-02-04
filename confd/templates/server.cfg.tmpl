@@ -1,30 +1,25 @@
 log on
-hostname "{{ .hostname }}"
-rcon_password "{{ .rcon_password }}"
-sv_lan "{{ .sv_lan }}"
-sv_region "{{ .sv_region }}"
-{{ if .sv_password }} sv_password "{{ .sv_password }}"{{ end }}
+hostname "{{ getv "/config/hostname" }}"
+rcon_password "{{ getv "/config/rcon_password" }}"
+sv_lan "{{ getv "/config/sv_lan" }}"
+sv_region "{{ getv "/config/sv_region" }}"
+{{ if exists "/config/sv_password" }} sv_password "{{ getv "/config/sv_password" }}"{{ end }}
 
+sbox_allownpcs {{ getv "/config/sbox_allownpcs" }}
+sbox_playergod {{ getv "/config/sbox_playergod" }}
+sbox_noclip {{ getv "/config/sbox_noclip" }}
 
-sbox_allownpcs {{ .sbox_allownpcs }}
-sbox_godmode {{ .sbox_godmode }}
-sbox_plpldamage {{ .sbox_plpldamage }}
-sbox_playergod {{ .sbox_playergod }}
-sbox_noclip {{ .sbox_noclip }}
-
-sbox_maxprops {{ .sbox_maxprops }}
-sbox_maxragdolls {{ .sbox_maxragdolls }}
-sbox_maxnpcs {{ .sbox_maxnpcs }}
-sbox_maxballoons {{ .sbox_maxballoons }}
-sbox_maxeffects {{ .sbox_maxeffects }}
-sbox_maxdynamite {{ .sbox_maxdynamite }}
-sbox_maxlamps {{ .sbox_maxlamps }}
-sbox_maxthrusters {{ .sbox_maxthrusters }}
-sbox_maxwheels {{ .sbox_maxwheels }}
-sbox_maxhoverballs {{ .sbox_maxhoverballs }}
-sbox_maxvehicles {{ .sbox_maxvehicles }}
-sbox_maxbuttons {{ .sbox_maxbuttons }}
-sbox_maxsents {{ .sbox_maxsents }}
-sbox_maxemitters {{ .sbox_maxemitters }}
-sbox_maxspawners {{ .sbox_maxspawners }}
-sbox_maxturrets {{ .sbox_maxturrets }}
+sbox_maxprops {{ getv "/config/sbox_maxprops" }}
+sbox_maxragdolls {{ getv "/config/sbox_maxragdolls" }}
+sbox_maxnpcs {{ getv "/config/sbox_maxnpcs" }}
+sbox_maxballoons {{ getv "/config/sbox_maxballoons" }}
+sbox_maxeffects {{ getv "/config/sbox_maxeffects" }}
+sbox_maxdynamite {{ getv "/config/sbox_maxdynamite" }}
+sbox_maxlamps {{ getv "/config/sbox_maxlamps" }}
+sbox_maxthrusters {{ getv "/config/sbox_maxthrusters" }}
+sbox_maxwheels {{ getv "/config/sbox_maxwheels" }}
+sbox_maxhoverballs {{ getv "/config/sbox_maxhoverballs" }}
+sbox_maxvehicles {{ getv "/config/sbox_maxvehicles" }}
+sbox_maxbuttons {{ getv "/config/sbox_maxbuttons" }}
+sbox_maxsents {{ getv "/config/sbox_maxsents" }}
+sbox_maxemitters {{ getv "/config/sbox_maxemitters" }}
