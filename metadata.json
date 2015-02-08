@@ -217,6 +217,12 @@
     "gm_flatgrass"
   ],
   "mods" :[
+    {
+      "name": "tf2_content",
+      "key": "Team Fortress 2 Content",
+      "docker_repo": "bfosberry/tf2_content",
+      "type": "content"
+    }
   ],
   "ports" :[
     { "port" : "26901",
