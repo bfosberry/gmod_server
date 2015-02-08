@@ -5,8 +5,13 @@
 FROM bfosberry/steam_base
 MAINTAINER bfosberry
 
-ADD ./confd /opt/server/confd
+RUN $STEAMDIR/steamcmd.sh +runscript /opt/server/scripts/update_script
+RUN cp $SERVERDIR/bin/*.so $HOME/.steam/sdk32/; true
+
 RUN mkdir /opt/server/cfg
+
+ADD ./scripts /opt/server/scripts
+ADD ./confd /opt/server/confd
 RUN sudo chown -R appuser:appuser /opt/
 
 WORKDIR /opt/server
