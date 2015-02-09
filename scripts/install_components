@@ -1,0 +1,4 @@
+#!/bin/bash
+# @author bfosberry
+
+find /opt/mods/*_content -exec cp "{}" /opt/teamspeak-server/plugins \;
