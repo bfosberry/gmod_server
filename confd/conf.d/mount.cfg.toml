@@ -1,0 +1,6 @@
+[template]
+src = "mount.cfg.tmpl"
+dest = "/opt/server/garrysmod/cfg/mount.cfg"
+keys = [
+  "/mods",
+]
