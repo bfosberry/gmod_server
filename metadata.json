@@ -213,15 +213,24 @@
     }
   ],
   "maps": [
-    "gm_construct",
-    "gm_flatgrass"
+    {
+      "name": "gm_construct",
+      "description": "",
+      "image_url": ""
+    },
+    {
+      "name": "gm_flatgrass",
+      "description": "",
+      "image_url": ""
+    }
   ],
   "mods" :[
     {
-      "name": "tf2_content",
-      "key": "Team Fortress 2 Content",
+      "key": "tf2-content",
+      "name": "Team Fortress 2 Content",
       "docker_repo": "bfosberry/tf2_content",
-      "type": "content"
+      "type": "content",
+      "versions": ["latest"]
     }
   ],
   "ports" :[
