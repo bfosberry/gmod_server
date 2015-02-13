@@ -44,6 +44,27 @@
       "required": true,
       "customizable" : true
     },
+    { "name" : "Game mode",
+      "key" : "gamemode",
+      "type" : "string",
+      "default_value": "garrysmod",
+      "required": true,
+      "customizable" : true
+    },
+    { "name" : "API Key",
+      "key" : "apikey",
+      "type" : "string",
+      "default_value": "",
+      "required": false,
+      "customizable" : true
+    },
+    { "name" : "Collection ID",
+      "key" : "collection_id",
+      "type" : "string",
+      "default_value": "",
+      "required": false,
+      "customizable" : true
+    },
     { "name" : "Map Cycle File",
       "key" : "mapcyclefile",
       "type" : "string",
