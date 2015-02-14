@@ -1,0 +1,6 @@
+[template]
+src = "maplist.txt.tmpl"
+dest = "/opt/server/garrysmod/cfg/maplist.txt"
+keys = [
+  "/config",
+]

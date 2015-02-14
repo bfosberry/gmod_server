@@ -1,0 +1,6 @@
+[template]
+src = "mapcycle.txt.tmpl"
+dest = "/opt/server/garrysmod/cfg/mapcycle.txt"
+keys = [
+  "/config",
+]

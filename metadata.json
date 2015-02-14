@@ -51,6 +51,13 @@
       "required": true,
       "customizable" : true
     },
+    { "name" : "Map list",
+      "key" : "maplist",
+      "type" : "string",
+      "default_value": "gm_construct\ngm_flatgrass",
+      "required": true,
+      "customizable" : true
+    },
     { "name" : "API Key",
       "key" : "apikey",
       "type" : "string",
