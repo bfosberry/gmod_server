@@ -3,7 +3,12 @@
     "name" : "gmod",
     "version" : "latest",
     "arch" : "amd64",
-    "docker_repo" : "bfosberry/gmod-server"
+    "docker_repo" : "bfosberry/gmod-server",
+    "cpu_share" : 200,
+    "mem_share" : 300,
+    "cpu_shares_per_slot" : 50,
+    "mem_shares_per_slot" : 20
+
   },
   "provides" : [
     { "name" : "Error",
