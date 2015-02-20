@@ -1,4 +1,5 @@
 "mountcfg"
 {
-	{{ if exists "/mods/tf2_content/" }} "tf" "/opt/mods/tf2_content" {{ end }}
+	{{ if exists "/mods/tf2-content/type" }} "tf" "/opt/mods/tf2-content/tf" {{ end }}
+	{{ if exists "/mods/css-content/type" }} "cs" "/opt/mods/css-content/cstrike" {{ end }}
 }

@@ -1,0 +1,6 @@
+[template]
+src = "mountdepots.txt.tmpl"
+dest = "/opt/server/garrysmod/cfg/mountdepots.txt"
+keys = [
+  "/mods",
+]

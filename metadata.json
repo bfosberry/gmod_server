@@ -271,6 +271,19 @@
         "cpu_shares_per_slot" : 0,
         "mem_shares_per_slot" : 0
       }
+    },
+    {
+      "key": "css-content",
+      "name": "CounterStrike:Source Content",
+      "docker_repo": "bfosberry/css_content",
+      "type": "content",
+      "versions": ["latest"],
+      "shares" : {
+        "cpu_share" : 5,
+        "mem_share" : 50,
+        "cpu_shares_per_slot" : 0,
+        "mem_shares_per_slot" : 0
+      }
     }
   ],
   "ports" :[
