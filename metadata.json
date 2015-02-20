@@ -4,11 +4,12 @@
     "version" : "latest",
     "arch" : "amd64",
     "docker_repo" : "bfosberry/gmod-server",
-    "cpu_share" : 200,
-    "mem_share" : 300,
-    "cpu_shares_per_slot" : 50,
-    "mem_shares_per_slot" : 20
-
+    "shares" : {
+      "cpu_share" : 200,
+      "mem_share" : 300,
+      "cpu_shares_per_slot" : 50,
+      "mem_shares_per_slot" : 20
+     }
   },
   "provides" : [
     { "name" : "Error",
@@ -264,10 +265,12 @@
       "docker_repo": "bfosberry/tf2_content",
       "type": "content",
       "versions": ["latest"],
-      "cpu_share" : 5,
-      "mem_share" : 50,
-      "cpu_shares_per_slot" : 0,
-      "mem_shares_per_slot" : 0
+      "shares" : {
+        "cpu_share" : 5,
+        "mem_share" : 50,
+        "cpu_shares_per_slot" : 0,
+        "mem_shares_per_slot" : 0
+      }
     }
   ],
   "ports" :[
