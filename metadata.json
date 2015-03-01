@@ -36,29 +36,15 @@
       "required": true,
       "customizable" : true
     },
-    { "name" : "Password",
-      "key" : "sv_password",
-      "type" : "string",
-      "default_value": "",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Region",
-      "key" : "sv_region",
-      "type" : "integer",
-      "default_value": 255,
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Game mode",
-      "key" : "gamemode",
-      "type" : "string",
-      "default_value": "garrysmod",
-      "required": true,
-      "customizable" : true
-    },
     { "name" : "Map list",
       "key" : "maplist",
+      "type" : "string",
+      "default_value": "gm_construct\ngm_flatgrass",
+      "required": true,
+      "customizable" : true
+    },
+    { "name" : "Map cycle",
+      "key" : "mapcycle",
       "type" : "string",
       "default_value": "gm_construct\ngm_flatgrass",
       "required": true,
@@ -77,172 +63,12 @@
       "default_value": "",
       "required": false,
       "customizable" : true
-    },
-    { "name" : "Map Cycle File",
-      "key" : "mapcyclefile",
+    }
+    { "name" : "Server Config",
+      "key" : "server_config",
       "type" : "string",
-      "default_value": "mapcycle.txt",
-      "required": true,
-      "customizable" : false
-    },
-    { 
-      "name" : "Max Players",
-      "key" : "max_players",
-      "type" : "integer",
-      "default_value": 8,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Starting Map",
-      "key" : "starting_map",
-      "type" : "string",
-      "default_value": "gm_construct",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Lan only",
-      "key" : "sv_lan",
-      "type" : "intbool",
-      "default_value": "0",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Allow NPCs",
-      "key" : "sbox_godmode",
-      "type" : "intbool",
-      "default_value": "0",
-      "required": true,
-      "customizable" : true
-    },
-        { 
-      "name" : "Allow Godmode",
-      "key" : "sbox_allownpcs",
-      "type" : "intbool",
-      "default_value": "1",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Allow Noclip",
-      "key" : "sbox_noclip",
-      "type" : "intbool",
-      "default_value": "1",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Props",
-      "key" : "sbox_maxprops",
-      "type" : "integer",
-      "default_value": "150",
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Ragdolls",
-      "key" : "sbox_maxragdolls",
-      "type" : "integer",
-      "default_value": 5,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max NPCs",
-      "key" : "sbox_maxnpcs",
-      "type" : "integer",
-      "default_value": 10,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Balloons",
-      "key" : "sbox_maxballoons",
-      "type" : "integer",
-      "default_value": 10,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Effects",
-      "key" : "sbox_maxeffects",
-      "type" : "integer",
-      "default_value": 50,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Dynamite",
-      "key" : "sbox_maxdynamite",
-      "type" : "integer",
-      "default_value": 10,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Lamps",
-      "key" : "sbox_maxlamps",
-      "type" : "integer",
-      "default_value": 20,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Thrusters",
-      "key" : "sbox_maxthrusters",
-      "type" : "integer",
-      "default_value": 30,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Wheels",
-      "key" : "sbox_maxwheels",
-      "type" : "integer",
-      "default_value": 20,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Hoverballs",
-      "key" : "sbox_maxhoverballs",
-      "type" : "integer",
-      "default_value": 20,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Vehicles",
-      "key" : "sbox_maxvehicles",
-      "type" : "integer",
-      "default_value": 6,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Buttons",
-      "key" : "sbox_maxbuttons",
-      "type" : "integer",
-      "default_value": 20,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Sents",
-      "key" : "sbox_maxsents",
-      "type" : "integer",
-      "default_value": 20,
-      "required": true,
-      "customizable" : true
-    },
-    { 
-      "name" : "Max Emitters",
-      "key" : "sbox_maxemitters",
-      "type" : "integer",
-      "default_value": 5,
-      "required": true,
+      "default_value": "",
+      "required": false,
       "customizable" : true
     }
   ],
