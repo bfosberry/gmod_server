@@ -63,12 +63,19 @@
       "default_value": "",
       "required": false,
       "customizable" : true
-    }
+    },
     { "name" : "Server Config",
       "key" : "server_config",
       "type" : "string",
       "default_value": "",
       "required": false,
+      "customizable" : true
+    },
+    { "name" : "Starting Map",
+      "key" : "map",
+      "type" : "string",
+      "default_value": "gm_construct",
+      "required": true,
       "customizable" : true
     }
   ],
