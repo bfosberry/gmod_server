@@ -22,13 +22,6 @@
   "responds_to" : [
   ],
   "requires" : [
-    { "name" : "Hostname",
-      "key" : "hostname",
-      "type" : "string",
-      "default_value": "My Garrys Mod Server",
-      "required": true,
-      "customizable" : true
-    },
     { "name" : "Rcon Password",
       "key" : "rcon_password",
       "type" : "string",
@@ -67,7 +60,7 @@
     { "name" : "Server Config",
       "key" : "server_config",
       "type" : "string",
-      "default_value": "",
+      "default_value": "hostname \"My Garrys Mod Server\"",
       "required": false,
       "customizable" : true
     },
@@ -75,6 +68,13 @@
       "key" : "map",
       "type" : "string",
       "default_value": "gm_construct",
+      "required": true,
+      "customizable" : true
+    },
+    { "name" : "Max Players",
+      "key" : "max_players",
+      "type" : "integer",
+      "default_value": 16,
       "required": true,
       "customizable" : true
     }
