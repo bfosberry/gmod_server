@@ -1,1 +1,1 @@
-{{ getv "/config/server_config" }}
+{{ if exists "/config/server_config" }}{{ getv "/config/server_config" }}{{end}}
