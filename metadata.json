@@ -1,144 +1,177 @@
 {
-  "info" : {
-    "name" : "gmod",
-    "version" : "latest",
-    "arch" : "amd64",
-    "docker_repo" : "bfosberry/gmod-server",
-    "shares" : {
-      "cpu_share" : 200,
-      "mem_share" : 300,
-      "cpu_shares_per_slot" : 50,
-      "mem_shares_per_slot" : 20
-     }
-  },
-  "provides" : [
-    { "name" : "Error",
-      "data_type" : "string",
-      "key" : "error",
-      "default_value" : "",
-      "visible" : false
-    }
-  ],
-  "responds_to" : [
-  ],
-  "requires" : [
-    { "name" : "Rcon Password",
-      "key" : "rcon_password",
-      "type" : "string",
-      "default_value": "password123",
-      "required": true,
-      "customizable" : true
+    "info": {
+        "name": "gmod",
+        "version": "0.1",
+        "schema_version": "0.1",
+        "docker_repo": "bfosberry/gmod-server",
+        "shares": {
+            "cpu_share": 200,
+            "mem_share": 300,
+            "cpu_shares_per_slot": 50,
+            "mem_shares_per_slot": 20
+        }
     },
-    { "name" : "Map list",
-      "key" : "maplist",
-      "type" : "string",
-      "default_value": "gm_construct\ngm_flatgrass",
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Map cycle",
-      "key" : "mapcycle",
-      "type" : "string",
-      "default_value": "gm_construct\ngm_flatgrass",
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "API Key",
-      "key" : "apikey",
-      "type" : "string",
-      "default_value": "",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Collection ID",
-      "key" : "collection_id",
-      "type" : "string",
-      "default_value": "",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Server Config",
-      "key" : "server_config",
-      "type" : "string",
-      "default_value": "hostname \"My Garrys Mod Server\"",
-      "required": false,
-      "customizable" : true
-    },
-    { "name" : "Starting Map",
-      "key" : "map",
-      "type" : "string",
-      "default_value": "gm_construct",
-      "required": true,
-      "customizable" : true
-    },
-    { "name" : "Max Players",
-      "key" : "max_players",
-      "type" : "integer",
-      "default_value": 16,
-      "required": true,
-      "customizable" : true
-    }
-  ],
-  "maps": [
-    {
-      "name": "gm_construct",
-      "description": "",
-      "image_url": ""
-    },
-    {
-      "name": "gm_flatgrass",
-      "description": "",
-      "image_url": ""
-    }
-  ],
-  "mods" :[
-    {
-      "key": "tf2-content",
-      "name": "Team Fortress 2 Content",
-      "docker_repo": "bfosberry/tf2_content",
-      "type": "content",
-      "versions": ["latest"],
-      "shares" : {
-        "cpu_share" : 5,
-        "mem_share" : 50,
-        "cpu_shares_per_slot" : 0,
-        "mem_shares_per_slot" : 0
-      }
-    },
-    {
-      "key": "css-content",
-      "name": "CounterStrike:Source Content",
-      "docker_repo": "bfosberry/css_content",
-      "type": "content",
-      "versions": ["latest"],
-      "shares" : {
-        "cpu_share" : 5,
-        "mem_share" : 50,
-        "cpu_shares_per_slot" : 0,
-        "mem_shares_per_slot" : 0
-      }
-    }
-  ],
-  "ports" :[
-    { "port" : "26901",
-      "protocol": "udp", 
-      "name": "Server Port",
-      "dynamic": false },
-    { "port" : "27005",
-      "protocol": "udp", 
-      "name": "Server Port",
-      "dynamic": false },
-    { "port" : "27015",
-      "protocol": "udp", 
-      "name": "Server Port",
-      "dynamic": false },
-    { "port": "27015",
-      "protocol": "tcp", 
-      "name" :"Server Port",
-      "dynamic": false },
-    { "port": "27020",
-      "protocol": "udp", 
-      "name": "SteamTv",
-      "dynamic": false }
-  ]
+    "provides": [
+        {
+            "name": "Error",
+            "data_type": "string",
+            "key": "error",
+            "default_value": "",
+            "visible": false,
+            "description": "If the container is in error"
+        }
+    ],
+    "responds_to": [],
+    "requires": [
+        {
+            "name": "Rcon Password",
+            "key": "rcon_password",
+            "type": "string",
+            "default_value": "password123",
+            "required": true,
+            "customizable": true,
+            "description": "The server admin password, change this immediately"
+        },
+        {
+            "name": "Map list",
+            "key": "maplist",
+            "type": "string",
+            "default_value": "gm_construct\ngm_flatgrass",
+            "required": true,
+            "customizable": true,
+            "description": "List of maps available to the server, one map per line"
+        },
+        {
+            "name": "Map cycle",
+            "key": "mapcycle",
+            "type": "string",
+            "default_value": "gm_construct\ngm_flatgrass",
+            "required": true,
+            "customizable": true,
+            "description": "List of maps to be automatically cycled by the server, one map per line"
+        },
+        {
+            "name": "API Key",
+            "key": "apikey",
+            "type": "string",
+            "default_value": "",
+            "required": false,
+            "customizable": true,
+            "description": "Your steam api key, used to download collections"
+        },
+        {
+            "name": "Collection ID",
+            "key": "collection_id",
+            "type": "string",
+            "default_value": "",
+            "required": false,
+            "customizable": true,
+            "description": "Id of the steam collection to install on this server, requires an api key"
+        },
+        {
+            "name": "Server Config",
+            "key": "server_config",
+            "type": "string",
+            "default_value": "hostname \"My Garrys Mod Server\"",
+            "required": true,
+            "customizable": true,
+            "description": "Custom server.cfg contents"
+        },
+        {
+            "name": "Starting Map",
+            "key": "map",
+            "type": "string",
+            "default_value": "gm_construct",
+            "required": true,
+            "customizable": true,
+            "description": "Map the server should start up on"
+        },
+        {
+            "name": "Max Players",
+            "key": "max_players",
+            "type": "integer",
+            "default_value": 16,
+            "required": true,
+            "customizable": true,
+            "description": "Maximum number of players allowed to connect to the server at a time"
+        }
+    ],
+    "maps": [
+        {
+            "name": "gm_construct",
+            "description": "",
+            "image_url": ""
+        },
+        {
+            "name": "gm_flatgrass",
+            "description": "",
+            "image_url": ""
+        }
+    ],
+    "mods": [
+        {
+            "key": "tf2-content",
+            "name": "Team Fortress 2 Content",
+            "description": "Mounted content from Team Fortress 2",
+            "docker_repo": "bfosberry/tf2_content",
+            "type": "content",
+            "versions": [
+                "latest"
+            ],
+            "maps": [],
+            "shares": {
+                "cpu_share": 5,
+                "mem_share": 50,
+                "cpu_shares_per_slot": 0,
+                "mem_shares_per_slot": 0
+            }
+        },
+        {
+            "key": "css-content",
+            "name": "CounterStrike:Source Content",
+            "description": "Mounted content from CounterStrike:Source",
+            "docker_repo": "bfosberry/css_content",
+            "type": "content",
+            "versions": [
+                "latest"
+            ],
+            "maps": [],
+            "shares": {
+                "cpu_share": 5,
+                "mem_share": 50,
+                "cpu_shares_per_slot": 0,
+                "mem_shares_per_slot": 0
+            }
+        }
+    ],
+    "ports": [
+        {
+            "port": "27005",
+            "protocol": "udp",
+            "name": "Client",
+            "description": "Game client port",
+            "dynamic": false
+        },
+        {
+            "port": "27015",
+            "protocol": "udp",
+            "name": "Host",
+            "description": "Game Listen port",
+            "dynamic": false
+        },
+        {
+            "port": "27015",
+            "protocol": "tcp",
+            "name": "Rcon ",
+            "description": "Remote console port for server admin",
+            "dynamic": false
+        },
+        {
+            "port": "27020",
+            "protocol": "udp",
+            "name": "SteamTv",
+            "description": "Steam TV port",
+            "dynamic": false
+        }
+    ]
 }
