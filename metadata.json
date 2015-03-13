@@ -172,6 +172,13 @@
             "name": "SteamTv",
             "description": "Steam TV port",
             "dynamic": false
+        },
+        {
+            "port": "26901",
+            "protocol": "udp",
+            "name": "VAC",
+            "description": "Steam VAC port",
+            "dynamic": false
         }
     ]
 }
