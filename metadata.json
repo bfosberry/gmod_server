@@ -9,7 +9,8 @@
             "mem_share": 300,
             "cpu_shares_per_slot": 50,
             "mem_shares_per_slot": 20
-        }
+        },
+        "configure_with": "etcd"
     },
     "provides": [
         {
