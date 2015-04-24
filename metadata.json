@@ -163,7 +163,7 @@
         {
             "port": "27015",
             "protocol": "tcp",
-            "name": "Rcon ",
+            "name": "Rcon",
             "description": "Remote console port for server admin",
             "dynamic": false
         },
