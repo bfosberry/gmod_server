@@ -5,8 +5,8 @@
         "schema_version": "0.1",
         "docker_repo": "bfosberry/gmod-server",
         "shares": {
-            "cpu_share": 200,
-            "mem_share": 300,
+            "cpu_shares": 200,
+            "mem_shares": 300,
             "cpu_shares_per_slot": 50,
             "mem_shares_per_slot": 20
         },
@@ -121,8 +121,8 @@
             ],
             "maps": [],
             "shares": {
-                "cpu_share": 5,
-                "mem_share": 50,
+                "cpu_shares": 5,
+                "mem_shares": 50,
                 "cpu_shares_per_slot": 0,
                 "mem_shares_per_slot": 0
             }
@@ -138,8 +138,8 @@
             ],
             "maps": [],
             "shares": {
-                "cpu_share": 5,
-                "mem_share": 50,
+                "cpu_shares": 5,
+                "mem_shares": 50,
                 "cpu_shares_per_slot": 0,
                 "mem_shares_per_slot": 0
             }
@@ -147,35 +147,35 @@
     ],
     "ports": [
         {
-            "port": "27005",
+            "port": 27005,
             "protocol": "udp",
             "name": "Client",
             "description": "Game client port",
             "dynamic": false
         },
         {
-            "port": "27015",
+            "port": 27015,
             "protocol": "udp",
             "name": "Host",
             "description": "Game Listen port",
             "dynamic": false
         },
         {
-            "port": "27015",
+            "port": 27015,
             "protocol": "tcp",
             "name": "Rcon",
             "description": "Remote console port for server admin",
             "dynamic": false
         },
         {
-            "port": "27020",
+            "port": 27020,
             "protocol": "udp",
             "name": "SteamTv",
             "description": "Steam TV port",
             "dynamic": false
         },
         {
-            "port": "26901",
+            "port": 26901,
             "protocol": "udp",
             "name": "VAC",
             "description": "Steam VAC port",
