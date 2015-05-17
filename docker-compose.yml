@@ -1,0 +1,11 @@
+server:
+  image: bfosberry/gmod-server
+  ports:
+    - "27005:27005/udp"
+    - "27015:27015/udp"
+    - "27015:27015"
+    - "27020:27020/udp"
+    - "26901:26901/udp"
+  environment:
+    - ETCD_SERVER=1.2.3.4:4001
+    - SERVER_ID=12345abcdef

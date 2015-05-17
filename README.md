@@ -1,6 +1,8 @@
 GMOD_server
 ===========
 
+[![Deploy to Tutum](https://s.tutum.co/deploy-to-tutum.svg)](https://dashboard.tutum.co/stack/deploy/)
+
 A standard gmod docker server compatible with the gamekick project
 
 This is based off of the steam_base repo and contains
